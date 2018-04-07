@@ -7,8 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/vendor.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <!-- build:css css/vendor.min.css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-transition/transition.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-dropdown/dropdown.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-search/search.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css">
+    <link rel="stylesheet" href="../node_modules/nouislider/distribute/nouislider.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+    <!-- endbuild -->
+    <!-- build:css css/main.min.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -51,8 +63,8 @@
                             <span class="text-2">Việt Nam đồng</span>
                         </div>
                         <div class="item" data-value="1">
-                            <span class="mr-2 text-1">BC</span>
-                            <span class="text-2">Bitcoin đồng</span>
+                            <span class="mr-2 text-1">USD</span>
+                            <span class="text-2">Đô La Mỹ</span>
                         </div>
                     </div>
                 </div>
@@ -66,7 +78,7 @@
             </a>
             <div class="d-flex flex-wrap align-items-center">
                 <nav class="d-flex flex-wrap">
-                    <a class="text-uppercase header-menu__link" href="">Tour du lịch</a>
+                    <a class="text-uppercase header-menu__link active" href="">Tour du lịch</a>
                     <a class="text-uppercase header-menu__link" href="">Khách sạn</a>
                     <a class="text-uppercase header-menu__link" href="">Thuê xe du lịch</a>
                     <div class="dropdown">
@@ -207,7 +219,7 @@
     <main class="pb-2 m-height-screen m-bg-grey">
         <div class="container">
             <!-- Begin breadcrumb -->
-            <nav class="pt-3 m-breadcrumb">
+            <nav class="pt-4 m-breadcrumb">
                 <ol class="d-flex align-items-center mb-0 pl-0 m-breadcrumb__list">
                     <li class="m-breadcrumb__item"><a href="">Trang chủ</a></li>
                     <li class="d-flex align-items-center m-breadcrumb__item">
@@ -225,373 +237,70 @@
                 <div class="row">
                     <div class="col-xl-3 mb-xl-4">
                         <div class="search-result__filter-bar">
-                            <div class="filter-bar">
-                                <div class="filter-bar__head">Hướng dẫn đặt phòng</div>
-                                <div class="filter-bar__head">Hướng dẫn đặt tour</div>
-                                <div class="filter-bar__head">Hướng dẫn thuê xe</div>
-                                <div class="filter-bar__head">Đặt các dịch vụ khác</div>
-                                
+                            <div class="filter-bar d-flex flex-column">
+                                <a class="py-3 pl-4 border-bottom guide__text-filter-bar active" href="">
+                                    <img class="mr-3" src="images/ic-guide1-active.svg">
+                                    Hướng dẫn đặt phòng
+                                </a>
+                                <a class="py-3 pl-4 border-bottom guide__text-filter-bar d-flex align-items-center" href="">
+                                    <img class="mr-3 svg" src="images/ic-guide1.svg">
+                                    <p class="m-0">Hướng dẫn đặt tour</p>
+                                </a>
+                                <a class="py-3 pl-4 border-bottom guide__text-filter-bar d-flex align-items-center" href="">
+                                    <img class="mr-3 svg" src="images/ic-guide1.svg">
+                                    <p class="m-0">Hướng dẫn thuê xe</p>
+                                </a>
+                                <a class="py-3 pl-4 border-bottom guide__text-filter-bar d-flex align-items-center" href="">
+                                    <img class="mr-3 svg" src="images/ic-guide1.svg">
+                                    <p class="m-0">Đặt các dịch vụ khác</p>
+                                </a>
                             </div>
-                            
+                            <div class="filter-bar d-flex flex-row pl-3">
+                                <img src="images/guide-ic-support.svg">
+                                <div class="p-3">
+                                    <label class="guide__text1">TỔNG ĐÀI HỖ TRỢ</label>
+                                    <p class="guide__text2 mb-0">(084) 3822 8898</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-9 mb-4">
                         <div class="search-result__content">
                             <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p41.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p41.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <h6 class="py-2 px-3 badge badge-danger hl-item__badge">Giảm 20% hôm nay</h6>
-                                                <div>
-                                                    <span class="mr-1 hl-item__text4">400,000 đ</span>
-                                                    <br>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="bg-white hl-item__wrap1 p-4">
+                                    <label class="guide__text3">Hướng dẫn đặt phòng</label>
+                                    <p class="guide__text4">FVG Travel là trang mạng du lịch trực tuyến hàng đầu Việt Nam. Với việc bắt tay hợp tác với nhiều đối tác, hệ thống trên FVG có hàng ngàn khách sạn đẳng cấp trên toàn quốc, ở mọi vùng miền. Với thiết kế thông minh, bắt mắt, quý khách chỉ cần mất vài phút để lựa chọn và hoàn thành việc đặt phòng khách sạn. Với phương châm phục vụ tối đa nhu cầu của khách hàng, FVG Travel cam kết mang đến chi phí đặt phòng thấp nhất, đồng thời cung cấp các dịch vụ hoàn hảo và chất lượng. Khi đặt phòng tại FVG Travel, quý khách sẽ được chúng tôi đón sân bay miễn phí, ngồi xe điện dạo quanh bãi biển và vô số các phần quà lưu niệm tặng kèm.
+                                    <br><br>
+                                    Và để việc đặt phòng diễn ra nhanh chóng và đúng quy định, quý khách vui lòng thực hiện các bước sau:
+                                    <br><br>
+                                    <b>Bước 1:</b>
+                                     Vào trang chủ FVGTravel.vn, chọn ngôn ngữ, sau đó kéo chuột xuống dưới. Ở mục khách sạn nhập địa điểm và các thông tin liên quan đến khách sạn mà bạn muốn đến.
+                                    </p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step1-1.png">
+                                    <p class="guide__text4">Bạn cũng có thể vào trang khách sạn và nhập thông tin khách sạn, ngày nhận phòng, ngày trả phòng, số phòng, số lượng người lưu trú tại khách sạn. Bạn cũng có thể dùng Google Maps để tìm kiếm vị trí khách sạn xem có thuận lợi với các địa điểm du lịch ở Đà Nẵng mà bạn dự định tham quan. Sau đó chọn Tìm kiếm.</p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step1-2.png">
+                                    <p class="guide__text4">
+                                        Ngay lập tức, thông tin khách sạn bạn muốn tìm kiếm sẽ xuất hiện trên màn hình hệ thống.
+                                        <br><br>
+                                        <b>Bước 2:</b> Bạn tham khảo thông tin chi tiết về tiện nghi, dịch vụ, giá cả, chính sách và kiểm tra phòng trống của khách sạn. Nếu bạn đồng ý lựa chọn phòng của 1 khách sạn, bạn chọn nút “Đặt phòng này”.
+                                    </p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step2.png">
+                                    <p class="guide__text4">
+                                        <b>Bước 3:</b>  Bạn điền các thông tin cần thiết để tiến hành xác nhận đặt phòng.
+                                    </p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step3.png">
+                                    <p class="guide__text4">
+                                        <b>Bước 4:</b>  Lựa chọn phương thức thanh toán của bạn để giúp chúng tôi xác nhận thanh toán của bạn.
+                                    </p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step4.png">
+                                    <p class="guide__text4">
+                                        <b>Bước 5:</b> Donec eu ex nulla. Suspendisse potenti. Donec maximus viverra dapibus. Aenean ex odio, tincidunt volutpat eros a, sodales venenatis leo. Curabitur lorem sem, tempor vitae pharetra sit amet, blandit at enim. Proin convallis rutrum libero quis mollis. 
+                                        <br><br>
+                                        Suspendisse blandit tempus neque, quis auctor orci tincidunt vel. Duis eu velit placerat turpis fermentum dapibus fringilla eu metus.
+                                    </p>
+                                    <img class="w-100 mb-3" src="images/guide-booking-tour-room-step5.png">
                                 </div>
                             </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p42.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p42.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <h6 class="py-2 px-3 badge badge-danger hl-item__badge">Giảm 20% hôm nay</h6>
-                                                <div>
-                                                    <span class="mr-1 hl-item__text4">400,000 đ</span>
-                                                    <br>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p37.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p37.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p43.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p43.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p37.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p37.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p41.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p41.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p42.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p42.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row d-flex align-items-end">
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="row h-100">
-                                                <div class="col-md-5 col-lg-4 col-xl-5 pr-md-0">
-                                                    <div class="h-100 m-z-outer position-relative">
-                                                        <img class="d-md-none w-100 m-z-inner" src="images/p43.png" alt="">
-                                                        <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p43.png) center center / cover"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8 col-xl-7 pl-md-0 pr-0">
-                                                    <div class="hl-item__content1">
-                                                        <a class="d-inline-block mb-2 hl-item__title1" href="">Amadora Wellness & Spa</a>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Địa chỉ:</span>
-                                                            <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
-                                                            <a class="hl-item__link1" href="">Xem bản đồ</a>
-                                                        </p>
-                                                        <p class="mb-2">
-                                                            <span class="mr-1 hl-item__label1">Loại hình:</span>
-                                                            <span class="mr-1 hl-item__text1">Chăm sóc da mặt, Massage Tay & Chân, Chăm sóc cơ thể, Chăm sóc móng</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <div class="text-right hl-item__content1 hl-item__content1-pt-0">
-                                                <div>
-                                                    <span class="mr-1 hl-item__text2">340,000</span>
-                                                    <span class="hl-item__text3">đ</span>
-                                                    <br>
-                                                    <span class="hl-item__text1">1 người</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3">
-                            <div class="mb-4"><!-- Begin navigate -->
-<nav class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate">
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16">
-            <path fill="#888888" d="M349.5 475.5l-211.1-211c-4.7-4.7-4.7-12.3 0-17l211.1-211c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L178.1 256l195.5 195.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.6-12.3 4.6-17-.1zm-111 0l7.1-7.1c4.7-4.7 4.7-12.3 0-17L50.1 256 245.5 60.5c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0l-211.1 211c-4.7 4.7-4.7 12.3 0 17l211.1 211c4.8 4.8 12.4 4.8 17.1.1z"></path>
-        </svg>
-    </a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="16" height="16">
-            <path fill="#888888" d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"></path>
-        </svg>
-    </a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link active">1</a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">2</a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">3</a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="16" height="16">
-            <path fill="#888888" d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path>
-        </svg>
-    </a>
-    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16">
-            <path fill="#888888" d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z"></path>
-        </svg>
-    </a>
-</nav>
-<!-- End navigate --></div>
                         </div>
                     </div>
                 </div>
@@ -987,8 +696,21 @@
     </div>
 <!-- End modal forget password -->
 </div>
-<script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script>
+<!-- build:js js/vendor.min.js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../node_modules/semantic-ui-transition/transition.min.js"></script>
+<script src="../node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
+<script src="../node_modules/semantic-ui-search/search.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../node_modules/nouislider/distribute/nouislider.min.js"></script>
+<script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<!-- endbuild -->
+<!-- build:js js/main.min.js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>

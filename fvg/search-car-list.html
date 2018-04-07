@@ -7,8 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/vendor.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <!-- build:css css/vendor.min.css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-transition/transition.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-dropdown/dropdown.min.css">
+    <link rel="stylesheet" href="../node_modules/semantic-ui-search/search.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css">
+    <link rel="stylesheet" href="../node_modules/nouislider/distribute/nouislider.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+    <!-- endbuild -->
+    <!-- build:css css/main.min.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -51,8 +63,8 @@
                             <span class="text-2">Việt Nam đồng</span>
                         </div>
                         <div class="item" data-value="1">
-                            <span class="mr-2 text-1">BC</span>
-                            <span class="text-2">Bitcoin đồng</span>
+                            <span class="mr-2 text-1">USD</span>
+                            <span class="text-2">Đô La Mỹ</span>
                         </div>
                     </div>
                 </div>
@@ -66,7 +78,7 @@
             </a>
             <div class="d-flex flex-wrap align-items-center">
                 <nav class="d-flex flex-wrap">
-                    <a class="text-uppercase header-menu__link" href="">Tour du lịch</a>
+                    <a class="text-uppercase header-menu__link active" href="">Tour du lịch</a>
                     <a class="text-uppercase header-menu__link" href="">Khách sạn</a>
                     <a class="text-uppercase header-menu__link" href="">Thuê xe du lịch</a>
                     <div class="dropdown">
@@ -205,194 +217,58 @@
 </section>
 <!-- End header mobile -->
     <main class="m-height-screen m-bg-grey">
-        <!-- Begin search result head -->
-        <section class="bg-white search-result__head">
-            <div class="container d-xl-flex justify-content-between align-items-center search-result__head-wrap">
-                <div class="d-xl-flex justify-content-between align-items-center search-filter">
-                    <div id="searchCarFrom" class="ui search form-group mr-xl-3">
-                        <input class="prompt rounded form-control m-selection__w180 search-filter__bg-location" type="text" placeholder="Điểm khởi hành...">
-                        <div class="results w-100 mt-0"></div>
-                    </div>
-                    <div id="searchCarTo" class="ui search form-group mr-xl-3">
-                        <input class="prompt rounded form-control m-selection__w180 search-filter__bg-location" type="text" placeholder="Điếm đếm...">
-                        <div class="results w-100 mt-0"></div>
-                    </div>
-                    <div class="form-group mr-xl-3">
-                        <input class="jsDatepicker form-control m-selection__w150 search-filter__bg-date" type="text" placeholder="Ngày nhận xe">
-                    </div>
-                    <div class="form-group mr-xl-3">
-                        <input class="jsDatepicker form-control m-selection__w150 search-filter__bg-date" type="text" placeholder="Ngày trả xe">
-                    </div>
-                    <div class="form-group">
-                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w180">
-                            <input type="hidden" name="car">
-                            <div class="default text">Chọn loại xe</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
-                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
-                            </svg>
-                            <div class="menu">
-                                <div class="item" data-value="0">
-                                    lamborghini 1
-                                    <span>chỗ</span>
-                                </div>
-                                <div class="item" data-value="1">
-                                    lamborghini 10
-                                    <span>chỗ</span>
-                                </div>
-                                <div class="item" data-value="2">
-                                    lamborghini 100
-                                    <span>chỗ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-sm-flex justify-content-center align-items-center">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="d-none d-xl-block mr-3 search-result__head-space"></div>
-                        <button class="d-flex justify-content-center align-items-center mr-2 border-0 search-result__head-btn">
-                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
-                        </button>
-                        <button class="d-flex justify-content-center align-items-center border-0 search-result__head-btn active">
-                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z" />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End search result head -->
 
         <!-- Begin search sesult body -->
         <section class="search-result__body">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 mb-xl-4">
-                        <div class="search-result__filter-bar">
-                            <div class="filter-bar">
-                                <div class="filter-bar__head">Hãng xe</div>
-                                <div class="filter-bar__body">
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">Hyundai</span>
-                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                    <div class="col-xl-3 mb-xl-4 pt-4">
+                        <div class="hl-item pt-1">
+                            <div class="bg-white hl-item__wrap1">
+                                <div class="hl-item__content1 pb-0">
+                                    <div id="searchTour" class="ui search form-group">
+                                        <input class="prompt rounded form-control m-selection__w-full search-filter__bg-search-color" style="font-size:14px;" type="text" placeholder="Điểm đến:">
+                                        <div class="results w-100 mt-0"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color" type="text" placeholder="Ngày thuê xe:">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color" type="text" placeholder="Giờ thuê xe:">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color" type="text" placeholder="Ngày trả xe:">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color" type="text" placeholder="Giờ trả xe:">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-xl-1 pr-lg-4 pr-md-3 pr-sm-3 pr-1 form-control m-selection m-selection__w-full">
+                                            <input type="hidden" name="">
+                                            <div class="default text" style="font-size:14px;">Loại xe:</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
+                                                <path fill="#EBA32E" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
+                                            </svg>
+                                            <div class="menu">
+                                                <div class="item" data-value="0">
+                                                    <span>4 chỗ</span>
+                                                </div>
+                                                <div class="item" data-value="1">
+                                                    <span>7 chỗ</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">Honda</span>
-                                            <span class="ml-1 filter-bar__text1">(324)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">Ford</span>
-                                            <span class="ml-1 filter-bar__text1">(47)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">KIA</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">Mazda</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="filter-bar">
-                                <div class="filter-bar__head">Mức giá khách sạn</div>
-                                <div class="filter-bar__body">
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">4 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">7 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(324)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">16 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(47)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">24 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(47)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">29 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">35 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(47)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">45 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
-                                    <label class="d-flex align-items-center filter-bar__item">
-                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
-                                        <div class="filter-bar__item-status"></div>
-                                        <div class="ml-2">
-                                            <span class="filter-bar__text2">50 chỗ</span>
-                                            <span class="ml-1 filter-bar__text1">(350)</span>
-                                        </div>
-                                    </label>
+                                <div class="hl-item__content1 pt-0">
+                                    <button type="submit" class="w-100 m-btn m-btn-orange ">TÌM KIẾM</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-9 mb-4">
-                        <div class="search-result__content">
-                            <div class="mb-4 mb-sm-3 hl-item">
+                        <div class="search-result__content pt-4">
+                            <div class="mb-4 mb-sm-3 hl-item pt-1">
                                 <div class="bg-white hl-item__wrap1">
                                     <div class="row">
                                         <div class="col-md-4 col-lg-3 col-xl-4 pr-md-0">
@@ -402,21 +278,25 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -446,21 +326,25 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -490,21 +374,25 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -534,21 +422,25 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -578,65 +470,25 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
                                                         </p>
-                                                    </div>
-                                                    <h6 class="mb-1">
-                                                        <span class="mr-1 hl-item__text2">340,000</span>
-                                                        <span class="hl-item__text3">đ</span>
-                                                    </h6>
-                                                </div>
-                                                <p class="mb-0">
-                                                    <span class="mr-1 hl-item__text1">
-                                                        Praesent at ipsum feugiat, porttitor dolor a, finibus mi . Nunc at turpis non felis ullamcorper tincidunt. Curabitur suscipit
-                                                        orci non vehicula faucibus. Etiam quis dui facilisis, commodo augue
-                                                        sed, lobortis diam.
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 mb-sm-3 hl-item">
-                                <div class="bg-white hl-item__wrap1">
-                                    <div class="row">
-                                        <div class="col-md-4 col-lg-3 col-xl-4 pr-md-0">
-                                            <div class="h-100 m-z-outer">
-                                                <img class="d-md-none w-100 m-z-inner" src="images/p27.png" alt="">
-                                                <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p27.png) center center / cover"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
-                                                <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
-                                                <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
-                                                        </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
-                                                        </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -666,21 +518,121 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
-                                            <div class="hl-item__content3">
+                                            <div class="hl-item__content3 py-3">
                                                 <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
                                                 <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
-                                                    <div class="d-md-flex">
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Hãng xe:</span>
-                                                            <span class="mr-1 hl-item__text1">Mazda</span>
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
                                                         </p>
-                                                        <p class="mb-1 mr-md-4">
-                                                            <span class="mr-1 hl-item__label1">Loại xe:</span>
-                                                            <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
                                                         </p>
-                                                        <p class="mb-1">
-                                                            <span class="mr-1 hl-item__label1">Đời xe:</span>
-                                                            <span class="mr-1 hl-item__text1">2016</span>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
+                                                        </p>
+                                                    </div>
+                                                    <h6 class="mb-1">
+                                                        <span class="mr-1 hl-item__text2">340,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                                <p class="mb-0">
+                                                    <span class="mr-1 hl-item__text1">
+                                                        Praesent at ipsum feugiat, porttitor dolor a, finibus mi . Nunc at turpis non felis ullamcorper tincidunt. Curabitur suscipit
+                                                        orci non vehicula faucibus. Etiam quis dui facilisis, commodo augue
+                                                        sed, lobortis diam.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 mb-sm-3 hl-item">
+                                <div class="bg-white hl-item__wrap1">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 col-xl-4 pr-md-0">
+                                            <div class="h-100 m-z-outer">
+                                                <img class="d-md-none w-100 m-z-inner" src="images/p29.png" alt="">
+                                                <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p29.png) center center / cover"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
+                                            <div class="hl-item__content3 py-3">
+                                                <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
+                                                        </p>
+                                                    </div>
+                                                    <h6 class="mb-1">
+                                                        <span class="mr-1 hl-item__text2">340,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                                <p class="mb-0">
+                                                    <span class="mr-1 hl-item__text1">
+                                                        Praesent at ipsum feugiat, porttitor dolor a, finibus mi . Nunc at turpis non felis ullamcorper tincidunt. Curabitur suscipit
+                                                        orci non vehicula faucibus. Etiam quis dui facilisis, commodo augue
+                                                        sed, lobortis diam.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 mb-sm-3 hl-item">
+                                <div class="bg-white hl-item__wrap1">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-3 col-xl-4 pr-md-0">
+                                            <div class="h-100 m-z-outer">
+                                                <img class="d-md-none w-100 m-z-inner" src="images/p30.png" alt="">
+                                                <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p30.png) center center / cover"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-9 col-xl-8 pl-md-0">
+                                            <div class="hl-item__content3 py-3">
+                                                <a class="d-inline-block mb-2 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <div class="d-flex justify-content-between align-items-end align-items-sm-start mb-1">
+                                                    <div class="col-9 col-sm-10 col-xl-8 pl-0 row">
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-4.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 chỗ</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-3.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Điều hòa nhiệt độ</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-2.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">4 cửa</span>
+                                                        </p>
+                                                        <p class="mb-0 col-md-6">
+                                                            <img src="images/ic-car-1.svg" width="16px" alt="">
+                                                            <span class="ml-2 hl-item__text1">Hộp số tay</span>
                                                         </p>
                                                     </div>
                                                     <h6 class="mb-1">
@@ -1098,8 +1050,21 @@
     </div>
 <!-- End modal forget password -->
 </div>
-<script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script>
+<!-- build:js js/vendor.min.js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../node_modules/semantic-ui-transition/transition.min.js"></script>
+<script src="../node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
+<script src="../node_modules/semantic-ui-search/search.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../node_modules/nouislider/distribute/nouislider.min.js"></script>
+<script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<!-- endbuild -->
+<!-- build:js js/main.min.js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>
