@@ -82,7 +82,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div>
-                    <a class="text-uppercase header-menu__link" href="">Tin khuyến mãi</a>
+                    <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
                     <button class="callModalRegister ml-2 m-btn m-btn-orange header-menu__btn">
@@ -226,45 +226,77 @@
                     <div class="filter-bar row justify-content-center py-5">
                         <div class="col-8">
                             <p class="contact__text1">Xin chào! Nếu bạn có bất kỳ phản hồi nào hãy gửi cho chúng tôi. Cám ơn.</p>
-                            <div class="row">
-                                <div class="col-md-6 col-12">
-                                    <div>
-                                        <div class="mb-1">
-                                            <span class="mr-1 book__text-5">Họ tên</span>
+                            <form class="needs-validation" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <div class="mb-1">
+                                                <span class="mr-1 book__text-5">Họ tên</span>
+                                            </div>
+                                            <input class="form-control" type="text" placeholder="Nguyễn Văn An" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
                                         </div>
-                                        <input class="mb-3 form-control" type="text" value="Nguyễn Văn An">
+                                        <div class="mb-3">
+                                            <div class="mb-1">
+                                                <span class="mr-1 book__text-5">Số điện thoại</span>
+                                            </div>
+                                            <input class="form-control" type="text" placeholder="0905222111" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="mb-1">
-                                            <span class="mr-1 book__text-5">Số điện thoại</span>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <div class="mb-1">
+                                                <span class="mr-1 book__text-5">Email</span>
+                                            </div>
+                                            <input class="form-control" type="text" placeholder="Annv@gmail.com" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
                                         </div>
-                                        <input class="mb-3 form-control" type="text" value="0905222111">
+                                        <div class="mb-3">
+                                            <div class="mb-1">
+                                                <span class="mr-1 book__text-5">Tiêu đề</span>
+                                            </div>
+                                            <input class="form-control" type="text" placeholder="Cần hỏi về Tour tự tạo" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="">
+                                            <div class="mb-1">
+                                                <span class="mr-1 book__text-5">Nội dung liên hệ</span>
+                                            </div>
+                                            <textarea class="form-control" rows="5" id="comment" placeholder="Nhập..." required></textarea>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12">
-                                    <div>
-                                        <div class="mb-1">
-                                            <span class="mr-1 book__text-5">Email</span>
-                                        </div>
-                                        <input class="mb-3 form-control" type="text" value="Annv@gmail.com">
-                                    </div>
-                                    <div>
-                                        <div class="mb-1">
-                                            <span class="mr-1 book__text-5">Tiêu đề</span>
-                                        </div>
-                                        <input class="mb-3 form-control" type="text" value="Cần hỏi về Tour tự tạo">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="">
-                                        <div class="mb-1">
-                                            <span class="mr-1 book__text-5">Nội dung liên hệ</span>
-                                        </div>
-                                        <textarea class="form-control" rows="5" id="comment" placeholder="Nhập..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="m-btn m-btn-orange mt-4 float-right">Gửi liên hệ</button>
+                                <button class="m-btn m-btn-orange mt-4 float-right">Gửi liên hệ</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -665,3 +697,23 @@
 </body>
 
 </html>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
