@@ -85,7 +85,7 @@
                     <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
-                    <button class="callModalRegister ml-2 m-btn m-btn-orange header-menu__btn">
+                    <button class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="11" viewBox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"
                             />
@@ -212,62 +212,100 @@
                     <div class="col-md-12 col-lg-6 col-xl-5 px-0">
                         <p class="hl-item__text7 text-white mb-1">Bạn đang muốn thuê xe?</p>
                         <p class="hl-item__text9">Cho chúng tôi biết thêm về nhu cầu của bạn nào:</p>
-                        <div class="col-md-9 pr-sm-0 pl-0 pr-0">
-                            <p class="mt-1 mb-2 hl-item__label1 text-white">Điểm đến</p>
-                            <div id="searchTour" class="ui search form-group">
-                                <input class="rounded form-control m-selection__w-full search-filter__bg-search-color bg-none hl-item__text9" type="text" placeholder="Nhập điểm đến">
-                                <div class="results w-100 mt-0"></div>
-                            </div>
-                            <div class="row align-items-end">
-                                <div class="col-md-8">
-                                    <p class="mt-1 mb-2 hl-item__label1 text-white">Ngày thuê xe</p>
-                                    <div class="form-group">
-                                        <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color bg-none hl-item__text9" type="text" placeholder="dd/mm/yyyy">
+                        <form class="needs-validation" novalidate>
+                            <div class="col-md-9 pr-sm-0 pl-0 pr-0">
+                                <p class="mt-1 mb-2 hl-item__label1 text-white">Điểm đến</p>
+                                <div id="searchTour" class="ui search form-group">
+                                    <input class="rounded form-control m-selection__w-full search-filter__bg-search-color bg-none hl-item__text9" type="text" placeholder="Nhập điểm đến" required>
+                                    <div class="valid-feedback">
+                                        Đã nhập
                                     </div>
-                                </div>
-                                <div class="col-md-4 pl-md-0">
-                                    <p class="mt-1 mb-2 hl-item__label1 text-white">Giờ thuê xe</p>
-                                    <div class="form-group">
-                                        <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color bg-none" type="text" placeholder="hh:mm">
+                                    <div class="invalid-feedback">
+                                        Chưa nhập
                                     </div>
+                                    <div class="results w-100 mt-0"></div>
                                 </div>
-                                <div class="col-md-8">
-                                    <p class="mt-1 mb-2 hl-item__label1 text-white">Ngày trả xe</p>
-                                    <div class="form-group">
-                                        <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color bg-none" type="text" placeholder="dd/mm/yyyy">
+                                <div class="row align-items-end">
+                                    <div class="col-md-8">
+                                        <p class="mt-1 mb-2 hl-item__label1 text-white">Ngày thuê xe</p>
+                                        <div class="form-group">
+                                            <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color bg-none hl-item__text9" type="text" placeholder="dd/mm/yyyy" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 pl-md-0">
-                                    <p class="mt-1 mb-2 hl-item__label1 text-white">Giờ trả xe</p>
-                                    <div class="form-group">
-                                        <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color bg-none" type="text" placeholder="hh:mm">
+                                    <div class="col-md-4 pl-md-0">
+                                        <p class="mt-1 mb-2 hl-item__label1 text-white">Giờ thuê xe</p>
+                                        <div class="form-group">
+                                            <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color bg-none" type="text" placeholder="hh:mm" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <p class="mt-1 mb-2 hl-item__label1 text-white">Loại xe</p>
-                                    <div class="form-group">
-                                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w-full bg-none">
-                                            <input type="hidden" name="">
-                                            <div class="default text" style="font-size:14px;">-Chọn-</div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
-                                                <path fill="#EBA32E" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
-                                            </svg>
-                                            <div class="menu">
-                                                <div class="item" data-value="0">
-                                                    <span>4 chỗ</span>
+                                    <div class="col-md-8">
+                                        <p class="mt-1 mb-2 hl-item__label1 text-white">Ngày trả xe</p>
+                                        <div class="form-group">
+                                            <input class="jsDatepicker form-control m-selection__w-full search-filter__bg-date-color bg-none" type="text" placeholder="dd/mm/yyyy" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pl-md-0">
+                                        <p class="mt-1 mb-2 hl-item__label1 text-white">Giờ trả xe</p>
+                                        <div class="form-group">
+                                            <input class="jsTimepicker form-control m-selection__w-full search-filter__bg-time-color bg-none" type="text" placeholder="hh:mm" required>
+                                            <div class="valid-feedback">
+                                                Đã nhập
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Chưa nhập
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p class="mt-1 mb-2 hl-item__label1 text-white">Loại xe</p>
+                                        <div class="form-group">
+                                            <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w-full bg-none">
+                                                <input type="hidden" name="" required>
+                                                <div class="default text" style="font-size:14px;"  required>-Chọn-</div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
+                                                    <path fill="#EBA32E" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
+                                                </svg>
+                                                <div class="menu">
+                                                    <div class="item" data-value="0">
+                                                        <span>4 chỗ</span>
+                                                    </div>
+                                                    <div class="item" data-value="1">
+                                                        <span>7 chỗ</span>
+                                                    </div>
                                                 </div>
-                                                <div class="item" data-value="1">
-                                                    <span>7 chỗ</span>
+                                                <div class="valid-feedback">
+                                                    Đã nhập
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Chưa nhập
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 pl-md-0 pb-3">
-                                    <button type="submit" class="w-100 m-btn m-btn-orange ">TÌM KIẾM</button>
+                                    <div class="col-md-4 pl-md-0 pb-3">
+                                        <button type="submit" class="w-100 m-btn m-btn-orange ">TÌM KIẾM</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
