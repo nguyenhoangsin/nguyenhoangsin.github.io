@@ -85,7 +85,7 @@
                     <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
-                    <button class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
+                    <a href="javascript:void(0)" class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="11" viewBox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"
                             />
@@ -93,15 +93,15 @@
                             <path d="M0 20h24v4H0z" fill-opacity=".36" />
                         </svg>
                         <span class="ml-1">Đăng ký</span>
-                    </button>
-                    <button class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
+                    </a>
+                    <a href="javascript:void(0)" class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="13" viewBox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
                             />
                         </svg>
                         <span class="ml-1">Đăng nhập</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -432,9 +432,9 @@
                                 <div id="collapseHotel" class="collapse show" aria-labelledby="headingHotel">
                                     <div class="hl-item__content4 pt-3 py-2">
                                         <div class="mb-3">
-                                            <img src="images/ic-back.svg" alt="">
                                             <a class="hl-item__link1" href="">
-                                                <span class="ml-2">Trở về</span>
+                                                <img src="images/ic-back.svg" class="mr-2" alt="">
+                                                <span>Trở về</span>
                                             </a>
                                         </div>
                                         <div class="mb-4 mb-sm-3 hl-item">
@@ -444,8 +444,8 @@
                                                         <div class="row h-100 ">
                                                             <div class="col-md-5 col-lg-4 pr-md-0">
                                                                 <div class="h-100 m-z-outer position-relative">
-                                                                    <img class="d-md-none w-100 m-z-inner" src="images/p5.png" alt="">
-                                                                    <div class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p5.png) center center / cover"></div>
+                                                                    <a href=""><img class="d-md-none w-100 m-z-inner" src="images/p5.png" alt=""></a>
+                                                                    <a href="" class="d-none d-md-block h-100 m-z-inner" style="background:url(images/p5.png) center center / cover"></a>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-7 col-lg-8 pl-md-0">
@@ -473,9 +473,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="table-responsive m-table">
+                                        <div class="pb-2 book-hotel__table-responsive m-table">
                                             <table class="table col-12">
-                                                <tr class="bg-secondary text-white hl-item__text1">
+                                                <tr class="bg-secondary text-white hl-item__text1 header-table">
                                                     <th>Loại chỗ nghỉ</th>
                                                     <th class="text-center">Sức chứa</th>
                                                     <th class="text-center">Giá phòng/ đêm</th>
@@ -483,25 +483,35 @@
                                                     <th>Đặt phòng</th>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <p class="text-uppercase hl-item__label1 mb-2">phòng Superior</p>
-                                                        <div class="mb-1">
+                                                    <td class="border-top">
+                                                        <div class="mx-auto">
+                                                            <p class="text-uppercase hl-item__label1 mb-2">phòng Superior</p>
+                                                            <div class="mb-1">
+                                                                <img src="images/p33.jpg" width="188px" alt="">
+                                                            </div>
+                                                            <a href="" class="hl-item__link5">Thông tin phòng</a>
+                                                        </div>
+                                                        <div class="m-auto table-images2">
                                                             <img src="images/p33.jpg" width="188px" alt="">
                                                         </div>
-                                                        <a href="" class="hl-item__link5">Thông tin phòng</a>
+                                                        <div class="m-auto table-images3">
+                                                            <img src="images/p33.jpg" width="188px" alt="">
+                                                        </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <span class="hl-item__text12">2 x</span>
-                                                        <img src="images/ic-people.svg" alt="">
+                                                    <td>
+                                                        <div class="ml-auto text-center">
+                                                            <span class="hl-item__text12">2 x</span>
+                                                            <img src="images/ic-people.svg" alt="">
+                                                        </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <p class="mb-0">
+                                                    <td class="">
+                                                        <span class="mb-0 ml-auto">
                                                             <span class="mr-1 hl-item__text2">340,000</span>
                                                             <span class="mr-1 hl-item__text3">đ</span>
-                                                        </p>
+                                                        </span>
                                                     </td>
                                                     <td class="text-center">
-                                                        <div class="form-group">
+                                                        <div class="form-group ml-auto">
                                                             <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection" style="height:33px;">
                                                                 <input type="hidden" name="child">
                                                                 <div class="text">1</div>
@@ -522,31 +532,43 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <button type="submit" class="m-btn m-btn-orange m-height-40">Đặt phòng này</button>
-                                                        <p class="hl-item__text6 mt-1">Xác nhận tức thời</p>
+                                                    <td>
+                                                        <div class="mx-auto text-center">
+                                                            <button type="submit" class="m-btn m-btn-orange m-height-40">Đặt phòng này</button>
+                                                            <p class="hl-item__text6 mt-1 mb-0">Xác nhận tức thời</p>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <p class="text-uppercase hl-item__label1 mb-2">phòng Deluxe</p>
-                                                        <div class="mb-1">
+                                                    <td class="border-top">
+                                                        <div class="mx-auto">
+                                                            <p class="text-uppercase hl-item__label1 mb-2">phòng Superior</p>
+                                                            <div class="mb-1">
+                                                                <img src="images/p33.jpg" width="188px" alt="">
+                                                            </div>
+                                                            <a href="" class="hl-item__link5">Thông tin phòng</a>
+                                                        </div>
+                                                        <div class="m-auto table-images2">
                                                             <img src="images/p33.jpg" width="188px" alt="">
                                                         </div>
-                                                        <a href="" class="hl-item__link5">Thông tin phòng</a>
+                                                        <div class="m-auto table-images3">
+                                                            <img src="images/p33.jpg" width="188px" alt="">
+                                                        </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <span class="hl-item__text12">2 x</span>
-                                                        <img src="images/ic-people.svg" alt="">
+                                                    <td>
+                                                        <div class="ml-auto text-center">
+                                                            <span class="hl-item__text12">2 x</span>
+                                                            <img src="images/ic-people.svg" alt="">
+                                                        </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <p class="mb-0">
-                                                            <span class="mr-1 hl-item__text2">450,000</span>
+                                                    <td class="">
+                                                        <span class="mb-0 ml-auto">
+                                                            <span class="mr-1 hl-item__text2">340,000</span>
                                                             <span class="mr-1 hl-item__text3">đ</span>
-                                                        </p>
+                                                        </span>
                                                     </td>
                                                     <td class="text-center">
-                                                        <div class="form-group">
+                                                        <div class="form-group ml-auto">
                                                             <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection" style="height:33px;">
                                                                 <input type="hidden" name="child">
                                                                 <div class="text">1</div>
@@ -567,59 +589,15 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <button type="submit" class="m-btn m-btn-orange m-height-40">Đặt phòng này</button>
-                                                        <p class="hl-item__text6 mt-1">Xác nhận tức thời</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
                                                     <td>
-                                                        <p class="text-uppercase hl-item__label1 mb-2">phòng Family sute</p>
-                                                        <div class="mb-1">
-                                                            <img src="images/p33.jpg" width="188px" alt="">
+                                                        <div class="mx-auto text-center">
+                                                            <button type="submit" class="m-btn m-btn-orange m-height-40">Đặt phòng này</button>
+                                                            <p class="hl-item__text6 mt-1 mb-0">Xác nhận tức thời</p>
                                                         </div>
-                                                        <a href="" class="hl-item__link5">Thông tin phòng</a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="hl-item__text12">2 x</span>
-                                                        <img src="images/ic-people.svg" alt="">
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <p class="mb-0">
-                                                            <span class="mr-1 hl-item__text2">500,000</span>
-                                                            <span class="mr-1 hl-item__text3">đ</span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <div class="form-group">
-                                                            <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection" style="height:33px;">
-                                                                <input type="hidden" name="child">
-                                                                <div class="text">1</div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
-                                                                    <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
-                                                                </svg>
-                                                                <div class="menu">
-                                                                    <div class="item" data-value="0">
-                                                                        0
-                                                                    </div>
-                                                                    <div class="item" data-value="1">
-                                                                        1
-                                                                    </div>
-                                                                    <div class="item" data-value="2">
-                                                                        2
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <button type="submit" class="m-btn m-btn-orange m-height-40">Đặt phòng này</button>
-                                                        <p class="hl-item__text6 mt-1">Xác nhận tức thời</p>
                                                     </td>
                                                 </tr>
                                             </table>
                                         </div>
-                                    </div>
                                     <hr>
                                     <div class="hl-item__content4 pt-4 py-3">
                                         <p class="hl-item__title1 text-uppercase">Phòng đã chọn</p>
@@ -1167,7 +1145,7 @@
                     <div class="p-1 hl-item">
                         <div class="bg-white hl-item__wrap1">
                             <div class="m-z-outer">
-                                <img class="m-z-inner" src="images/p33.jpg" alt="">
+                                <a href=""><img class="m-z-inner" src="images/p33.jpg" alt=""></a>
                             </div>
                             <div class="hl-item__content1 position-relative">
                                 <a class="d-inline-block mb-2 hl-item__title1" href="">COMBO 3N2Đ tận hưởng xuân tại Risemount</a>
@@ -1201,7 +1179,7 @@
                     <div class="p-1 hl-item">
                         <div class="bg-white hl-item__wrap1">
                             <div class="m-z-outer">
-                                <img class="m-z-inner" src="images/p34.jpg" alt="">
+                                <a href=""><img class="m-z-inner" src="images/p34.jpg" alt=""></a>
                             </div>
                             <div class="hl-item__content1 position-relative">
                                 <a class="d-inline-block mb-2 hl-item__title1" href="">COMBO 3N2Đ tận hưởng xuân tại Risemount</a>
@@ -1235,7 +1213,7 @@
                     <div class="p-1 hl-item">
                         <div class="bg-white hl-item__wrap1">
                             <div class="m-z-outer">
-                                <img class="m-z-inner" src="images/p32.jpg" alt="">
+                                <a href=""><img class="m-z-inner" src="images/p32.jpg" alt=""></a>
                             </div>
                             <div class="hl-item__content1 position-relative">
                                 <a class="d-inline-block mb-2 hl-item__title1" href="">COMBO 3N2Đ tận hưởng xuân tại Risemount</a>
@@ -1269,7 +1247,7 @@
                     <div class="p-1 hl-item">
                         <div class="bg-white hl-item__wrap1">
                             <div class="m-z-outer">
-                                <img class="m-z-inner" src="images/p33.jpg" alt="">
+                                <a href=""><img class="m-z-inner" src="images/p33.jpg" alt=""></a>
                             </div>
                             <div class="hl-item__content1 position-relative">
                                 <a class="d-inline-block mb-2 hl-item__title1" href="">COMBO 3N2Đ tận hưởng xuân tại Risemount</a>
@@ -1668,28 +1646,28 @@
     <!-- // -->
     <!-- Begin modal forget password -->
 <div id="modalComment" class="modal fade modal-c">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header p-4">
-                    <h5 class="modal-title">Ý kiến của bạn</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="">
-                    <div class="modal-body p-4">
-                        <textarea rows="10" class="col-12 p-0 hl-item__text1" placeholder="Nhập ý kiến của bạn..."></textarea>
-                    </div>
-                    <div class="modal-footer p-4">
-                        <div class="text-center">
-                            <button type="button" data-dismiss="modal" aria-label="Close" class="m-btn m-btn-close">Đóng</button>
-                            <button type="submit" class="m-btn m-btn-orange">Đăng ý kiến</button>
-                        </div>
-                    </div>
-                </form>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header p-4">
+                <h5 class="modal-title">Ý kiến của bạn</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <form action="">
+                <div class="modal-body p-4">
+                    <textarea rows="10" class="col-12 p-0 hl-item__text1" placeholder="Nhập ý kiến của bạn..."></textarea>
+                </div>
+                <div class="modal-footer p-4">
+                    <div class="text-center">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="m-btn m-btn-close">Đóng</button>
+                        <button type="submit" class="m-btn m-btn-orange">Đăng ý kiến</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 <!-- End modal forget password -->
     <!-- // -->
     <!-- Begin modal create custom tour success -->

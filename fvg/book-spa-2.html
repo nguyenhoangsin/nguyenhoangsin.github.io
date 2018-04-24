@@ -85,7 +85,7 @@
                     <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
-                    <button class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
+                    <a href="javascript:void(0)" class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="11" viewBox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"
                             />
@@ -93,15 +93,15 @@
                             <path d="M0 20h24v4H0z" fill-opacity=".36" />
                         </svg>
                         <span class="ml-1">Đăng ký</span>
-                    </button>
-                    <button class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
+                    </a>
+                    <a href="javascript:void(0)" class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="13" viewBox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
                             />
                         </svg>
                         <span class="ml-1">Đăng nhập</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -256,22 +256,22 @@
                                     </h4>
                                     <label class="book__radio mb-3">
                                         <span class="book__text-15">Chuyển khoản/ Internet banking</span>
-                                        <input type="radio" name="radio">
+                                        <input type="radio" name="radio" data-id="book__radio_id1">
                                         <span class="book__radio-status"></span>
                                     </label>
                                     <label class="book__radio mb-3">
                                         <span class="book__text-15">Thanh toán bằng thẻ ATM</span>
-                                        <input type="radio" name="radio">
+                                        <input type="radio" name="radio" data-id="book__radio_id2">
                                         <span class="book__radio-status"></span>
                                     </label>
                                     <label class="book__radio mb-3">
                                         <span class="book__text-15">Thanh toán bằng thẻ tín dụng (Master/ Visa)</span>
-                                        <input type="radio" name="radio">
+                                        <input type="radio" name="radio" data-id="book__radio_id3">
                                         <span class="book__radio-status"></span>
                                     </label>
                                     <label class="book__radio mb-3">
                                         <span class="book__text-15">Thanh toán qua Paypal</span>
-                                        <input type="radio" name="radio">
+                                        <input type="radio" name="radio" data-id="book__radio_id4">
                                         <span class="book__radio-status"></span>
                                     </label>
                                     <a href="" class="book__link1">Quy định thanh toán/ bồi hoàn</a>
@@ -307,10 +307,24 @@
                         <!-- End block -->
                         <div class="my-4 book__line"></div>
                         <!-- Begin block -->
-                        <div class="pt-0">
-                            <div class="mb-4 text-center book__title">Hướng dẫn thanh toán</div>
-                            <div class="book__wrap1 p-4">
-                                <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức chuyển khoản, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                        <div class="mb-4 text-center book__title">Hướng dẫn thanh toán</div>
+                        <div>
+                            <div id="book__radio_id1" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức chuyển khoản, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id2" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức ATM, quý khách vui lòng thanh toán vào địa chi sau:</div>
                                 <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
                                 <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
                                 <div class="mb-2">Số tài khoản :</div>
@@ -319,6 +333,33 @@
                                 <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
                                 <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
                                 <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id3" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức thẻ tín dụng, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id4" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức Paypal, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
                             </div>
                         </div>
                         <!-- End block -->
@@ -697,28 +738,28 @@
     <!-- // -->
     <!-- Begin modal forget password -->
 <div id="modalComment" class="modal fade modal-c">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header p-4">
-                    <h5 class="modal-title">Ý kiến của bạn</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="">
-                    <div class="modal-body p-4">
-                        <textarea rows="10" class="col-12 p-0 hl-item__text1" placeholder="Nhập ý kiến của bạn..."></textarea>
-                    </div>
-                    <div class="modal-footer p-4">
-                        <div class="text-center">
-                            <button type="button" data-dismiss="modal" aria-label="Close" class="m-btn m-btn-close">Đóng</button>
-                            <button type="submit" class="m-btn m-btn-orange">Đăng ý kiến</button>
-                        </div>
-                    </div>
-                </form>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header p-4">
+                <h5 class="modal-title">Ý kiến của bạn</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <form action="">
+                <div class="modal-body p-4">
+                    <textarea rows="10" class="col-12 p-0 hl-item__text1" placeholder="Nhập ý kiến của bạn..."></textarea>
+                </div>
+                <div class="modal-footer p-4">
+                    <div class="text-center">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="m-btn m-btn-close">Đóng</button>
+                        <button type="submit" class="m-btn m-btn-orange">Đăng ý kiến</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 <!-- End modal forget password -->
 </div>
 <script src="js/vendor.min.js"></script>

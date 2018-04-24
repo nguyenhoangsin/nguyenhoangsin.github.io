@@ -85,7 +85,7 @@
                     <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
-                    <button class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
+                    <a href="javascript:void(0)" class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="11" viewBox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"
                             />
@@ -93,15 +93,15 @@
                             <path d="M0 20h24v4H0z" fill-opacity=".36" />
                         </svg>
                         <span class="ml-1">Đăng ký</span>
-                    </button>
-                    <button class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
+                    </a>
+                    <a href="javascript:void(0)" class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="13" viewBox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
                             />
                         </svg>
                         <span class="ml-1">Đăng nhập</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -205,97 +205,6 @@
 </section>
 <!-- End header mobile -->
     <main class="m-height-screen m-bg-grey">
-        <!-- Begin search result head -->
-        <section class="bg-white search-result__head">
-            <div class="container d-xl-flex justify-content-between align-items-center search-result__head-wrap">
-                <div class="d-xl-flex align-items-center search-filter">
-                    <div id="searchTour" class="ui search form-group">
-                        <input class="prompt rounded form-control m-selection__w235 search-filter__bg-search" type="text" placeholder="Tìm địa điểm...">
-                        <div class="results w-100 mt-0"></div>
-                    </div>
-                    <div class="form-group">
-                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w235">
-                            <input type="hidden" name="price">
-                            <div class="default text">Chọn khoảng giá</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
-                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
-                            </svg>
-                            <div class="menu">
-                                <div class="item" data-value="0">
-                                    <span>Từ</span> 1.000.000
-                                    <span>&#60;</span> 10.000.000
-                                    <span>đ</span>
-                                </div>
-                                <div class="item" data-value="1">
-                                    <span>Từ</span> 10.000.000
-                                    <span>&#60;</span> 100.000.000
-                                    <span>đ</span>
-                                </div>
-                                <div class="item" data-value="2">
-                                    <span>Từ</span> 100.000.000
-                                    <span>&#60;</span> 900.000.000
-                                    <span>đ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w180">
-                            <input type="hidden" name="price">
-                            <div class="default text">Chọn khoảng thời gian</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
-                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
-                            </svg>
-                            <div class="menu">
-                                <div class="item" data-value="0">
-                                    <span>Từ</span> 1
-                                    <span>đến dưới</span> 7
-                                    <span>ngày</span>
-                                </div>
-                                <div class="item" data-value="1">
-                                    <span>Từ</span> 7
-                                    <span>đến dưới</span> 14
-                                    <span>ngày</span>
-                                </div>
-                                <div class="item" data-value="2">
-                                    <span>Từ</span> 14
-                                    <span>đến dưới</span> 31
-                                    <span>ngày</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-sm-flex justify-content-center align-items-center">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="d-none d-xl-block mr-3 search-result__head-space"></div>
-                        <button class="d-flex justify-content-center align-items-center mr-2 border-0 search-result__head-btn active">
-                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
-                        </button>
-                        <button class="d-flex justify-content-center align-items-center border-0 search-result__head-btn">
-                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z" />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
-                        </button>
-                        <div class="mr-3 ml-3 search-result__head-space"></div>
-                        <button class="d-flex justify-content-center align-items-center mr-sm-3 border-0 search-result__head-btn">
-                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 8c0-3.31-2.69-6-6-6S6 4.69 6 8c0 4.5 6 11 6 11s6-6.5 6-11zm-8 0c0-1.1.9-2 2-2s2 .9 2 2-.89 2-2 2c-1.1 0-2-.9-2-2zM5 20v2h14v-2H5z"
-                                />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
-                        </button>
-                    </div>
-                    <a class="d-flex justify-content-center align-items-center m-btn m-btn-grey search-result__head-btn-create" href="create-custom-tour.html">Tự thiết kế tour</a>
-                </div>
-            </div>
-        </section>
-        <!-- End search result head -->
-
         <div class="container">
             <!-- Begin breadcrumb -->
 <nav class="pt-3 m-breadcrumb">
@@ -318,13 +227,57 @@
                     <div class="col-lg-4 col-xl-3 mb-lg-4">
                         <div class="search-result__filter-bar pt-0">
                             <div class="filter-bar">
-                                <div class="filter-bar__head">Loại không gian</div>
+                                <div class="filter-bar__body">
+                                    <div id="searchTour" class="ui search form-group mb-2">
+                                        <input class="prompt rounded form-control m-selection__w-full  search-filter__bg-search-color" type="text" placeholder="Điểm đến">
+                                        <div class="results w-100 mt-0"></div>
+                                    </div>
+                                    <button class="m-btn m-btn-orange w-100">Xem chi tiết</button>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Danh mục</div>
+                                <div class="filter-bar__body">
+                                    <a href="" class="d-flex align-items-center filter-bar__item filter-bar__link">
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Buffet</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="d-flex align-items-center filter-bar__item filter-bar__link">
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Bar, Pub & Club</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="d-flex align-items-center filter-bar__item filter-bar__link">
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Nhà hàng</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="d-flex align-items-center filter-bar__item filter-bar__link">
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Cafe - Kem - Bánh</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="d-flex align-items-center filter-bar__item filter-bar__link">
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Quán ăn</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Thương hiệu</div>
                                 <div class="filter-bar__body">
                                     <label class="d-flex align-items-center filter-bar__item">
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Cổ kính</span>
+                                            <span class="filter-bar__text2">Agrill Beer House & BBQ</span>
                                             <span class="ml-1 filter-bar__text1">(21)</span>
                                         </div>
                                     </label>
@@ -332,7 +285,7 @@
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Hiện đại</span>
+                                            <span class="filter-bar__text2">Buffet BBQ & Hotpot</span>
                                             <span class="ml-1 filter-bar__text1">(324)</span>
                                         </div>
                                     </label>
@@ -340,7 +293,7 @@
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Trung Quốc</span>
+                                            <span class="filter-bar__text2">Buffet Nik Nak</span>
                                             <span class="ml-1 filter-bar__text1">(47)</span>
                                         </div>
                                     </label>
@@ -348,7 +301,7 @@
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Nhật</span>
+                                            <span class="filter-bar__text2">Buffet Sứ</span>
                                             <span class="ml-1 filter-bar__text1">(350)</span>
                                         </div>
                                     </label>
@@ -356,7 +309,7 @@
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Châu Âu</span>
+                                            <span class="filter-bar__text2">Buffet Yaki</span>
                                             <span class="ml-1 filter-bar__text1">(350)</span>
                                         </div>
                                     </label>
@@ -364,7 +317,171 @@
                                         <input class="d-none filter-bar__item-checkbox" type="checkbox">
                                         <div class="filter-bar__item-status"></div>
                                         <div class="ml-2">
-                                            <span class="filter-bar__text2">Ấn Độ</span>
+                                            <span class="filter-bar__text2">Bò nhúng dấm 555</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Loại ẩm thực</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Lẩu</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Hải sản</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Nướng</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Cơm văn phòng</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Đồ chay</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Đồ ăn vặt</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Loại nhà hàng</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Nhà hàng</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Nhà hàng sang trọng</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Quán ăn - Ăn vặt</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Hình thức</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Bufet - BBQ</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Set - Combo</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Chọn món</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Buffet</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Đóng gói sẵn</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Buổi</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Tối</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Trưa</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Cả ngày</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Sáng</span>
                                             <span class="ml-1 filter-bar__text1">(350)</span>
                                         </div>
                                     </label>
@@ -374,25 +491,25 @@
                                 <div class="filter-bar__head">Spa lý tưởng</div>
                                 <div class="filter-bar__body pb-2">
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p41.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p41.png" alt="" width="68px;" height="45px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 filter-bar__link m-0">5 buổi chăm sóc da chuyên sâu kết hợp thải độc chì - Lyhan Spa</p>
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p41.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p41.png" alt="" width="68px;" height="45px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 filter-bar__link m-0">5 buổi chăm sóc da chuyên sâu kết hợp thải độc chì - Lyhan Spa</p>
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p41.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p41.png" alt="" width="68px;" height="45px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 filter-bar__link m-0">5 buổi chăm sóc da chuyên sâu kết hợp thải độc chì - Lyhan Spa</p>
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p41.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p41.png" alt="" width="68px;" height="45px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 filter-bar__link m-0">5 buổi chăm sóc da chuyên sâu kết hợp thải độc chì - Lyhan Spa</p>
                                         </div>
@@ -403,7 +520,7 @@
                                 <div class="filter-bar__head">Xe cho thuê hot</div>
                                 <div class="filter-bar__body pb-2">
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p28.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p28.png" alt="" width="100px;" height="68px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 m-0 filter-bar__link">Xe du lịch 4 chỗ Mazda 6</p>
                                             <p class="mb-0">
@@ -413,7 +530,7 @@
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p28.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p28.png" alt="" width="100px;" height="68px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 m-0 filter-bar__link">Xe du lịch 4 chỗ Mazda 6</p>
                                             <p class="mb-0">
@@ -423,7 +540,7 @@
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p28.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p28.png" alt="" width="100px;" height="68px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 m-0 filter-bar__link">Xe du lịch 4 chỗ Mazda 6</p>
                                             <p class="mb-0">
@@ -433,7 +550,7 @@
                                         </div>
                                     </a>
                                     <a href="" class="d-flex align-items-center mb-3">
-                                        <img class="rounded" src="images/p28.png" alt="" width="100px;">
+                                        <img class="rounded" src="images/p28.png" alt="" width="100px;" height="68px;">
                                         <div class="pl-2">
                                             <p class="filter-bar__text5 m-0 filter-bar__link">Xe du lịch 4 chỗ Mazda 6</p>
                                             <p class="mb-0">
@@ -452,7 +569,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer position-relative">
-                                            <img class="w-100 m-z-inner" src="images/p38.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p38.png" alt=""></a>
                                             <h6 class="position-absolute py-2 px-3 badge badge-danger hl-item__badge">-15%</h6>
                                         </div>
                                         <div class="hl-item__content1">
@@ -479,7 +596,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p39.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -505,7 +622,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p40.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -531,7 +648,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p39.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -557,7 +674,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p40.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -583,7 +700,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p39.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -609,7 +726,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p40.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -635,7 +752,7 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p39.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
@@ -661,7 +778,398 @@
                                 <div class="hl-item">
                                     <div class="bg-white hl-item__wrap1">
                                         <div class="m-z-outer">
-                                            <img class="w-100 m-z-inner" src="images/p40.png" alt="">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer position-relative">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p38.png" alt=""></a>
+                                            <h6 class="position-absolute py-2 px-3 badge badge-danger hl-item__badge">-15%</h6>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p39.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
+                                        </div>
+                                        <div class="hl-item__content1">
+                                            <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Địa chỉ:</span>
+                                                <span class="mr-1 hl-item__text1">250 Bà Triệu, Hoàn Kiếm, Hà Nội -</span>
+                                                <span class="mr-1 hl-item__text1"><a href=""> Xem bản đồ</a></span>
+                                            </p>
+                                            <p class="mb-1">
+                                                <span class="mr-1 hl-item__label1">Loại hình ẩm thực:</span>
+                                                <span class="mr-1 hl-item__text1"> Lẩu, Nướng</span>
+                                            </p>
+                                            <h6 class="mb-0">
+                                                <span class="mr-1 hl-item__text2">340,000</span>
+                                                <span class="hl-item__text3">đ</span>
+                                                <span class="hl-item__text1">1 người</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 mb-4 pb-1">
+                                <div class="hl-item">
+                                    <div class="bg-white hl-item__wrap1">
+                                        <div class="m-z-outer">
+                                            <a href=""><img class="w-100 m-z-inner" src="images/p40.png" alt=""></a>
                                         </div>
                                         <div class="hl-item__content1">
                                             <a class="d-inline-block mb-2 hl-item__title1" href="">Lẩu Hội Quán - Hoàng Cầu</a>

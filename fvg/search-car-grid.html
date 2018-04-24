@@ -85,7 +85,7 @@
                     <a class="text-uppercase header-menu__link" href="">COMBO - Khuyến mãi</a>
                 </nav>
                 <div class="d-flex">
-                    <a href="javascript:void(0)" class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
+                    <button class="callModalRegister ml-0 ml-xl-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="11" viewBox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"
                             />
@@ -93,15 +93,15 @@
                             <path d="M0 20h24v4H0z" fill-opacity=".36" />
                         </svg>
                         <span class="ml-1">Đăng ký</span>
-                    </a>
-                    <a href="javascript:void(0)" class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
+                    </button>
+                    <button class="callModalLogin ml-2 m-btn m-btn-orange header-menu__btn">
                         <svg fill="#fff" height="13" viewBox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z"
                             />
                         </svg>
                         <span class="ml-1">Đăng nhập</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -205,224 +205,542 @@
 </section>
 <!-- End header mobile -->
     <main class="m-height-screen m-bg-grey">
+        <!-- Begin search result head -->
+        <section class="bg-white search-result__head">
+            <div class="container d-xl-flex justify-content-between align-items-center search-result__head-wrap">
+                <div class="d-xl-flex justify-content-between align-items-center search-filter">
+                    <div id="searchCarFrom" class="ui search form-group mr-xl-3">
+                        <input class="prompt rounded form-control m-selection__w180 search-filter__bg-location" type="text" placeholder="Điểm khởi hành...">
+                        <div class="results w-100 mt-0"></div>
+                    </div>
+                    <div id="searchCarTo" class="ui search form-group mr-xl-3">
+                        <input class="prompt rounded form-control m-selection__w180 search-filter__bg-location" type="text" placeholder="Điếm đếm...">
+                        <div class="results w-100 mt-0"></div>
+                    </div>
+                    <div class="form-group mr-xl-3">
+                        <input class="jsDatepicker form-control m-selection__w150 search-filter__bg-date" type="text" placeholder="Ngày nhận xe">
+                    </div>
+                    <div class="form-group mr-xl-3">
+                        <input class="jsDatepicker form-control m-selection__w150 search-filter__bg-date" type="text" placeholder="Ngày trả xe">
+                    </div>
+                    <div class="form-group">
+                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w180">
+                            <input type="hidden" name="car">
+                            <div class="default text">Chọn loại xe</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
+                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
+                            </svg>
+                            <div class="menu">
+                                <div class="item" data-value="0">
+                                    lamborghini 1
+                                    <span>chỗ</span>
+                                </div>
+                                <div class="item" data-value="1">
+                                    lamborghini 10
+                                    <span>chỗ</span>
+                                </div>
+                                <div class="item" data-value="2">
+                                    lamborghini 100
+                                    <span>chỗ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-sm-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="d-none d-xl-block mr-3 search-result__head-space"></div>
+                        <button class="d-flex justify-content-center align-items-center mr-2 border-0 search-result__head-btn active">
+                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </button>
+                        <button class="d-flex justify-content-center align-items-center border-0 search-result__head-btn">
+                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End search result head -->
 
-        <div class="container">
-            <!-- Begin breadcrumb -->
-<nav class="pt-3 m-breadcrumb">
-    <ol class="d-flex align-items-center mb-0 pl-0 m-breadcrumb__list">
-        <li class="m-breadcrumb__item"><a href="">Home</a></li>
-        <li class="d-flex align-items-center m-breadcrumb__item">
-            <img class="mx-1" src="images/ic-right-breadcrumb.svg" alt="">
-            <span>Sub page</span>
-        </li>
-    </ol>
-</nav>
-<!-- End breadcrumb -->
-        </div>
-
-        <!-- Begin search result body -->
+        <!-- Begin search sesult body -->
         <section class="search-result__body">
             <div class="container">
-                <div class="row pr-2">
-                    <div class="col-xl-8 pr-xl-2 pt-3 line-height-1-2">
-                        <div class="hl-item">
-                            <div id="introdude" class="bg-white hl-item__wrap1">
-                                <div class="hl-item__content4">
-                                    <p class="d-inline-block mb-3 hl-item__title4" href="">Bí kíp chọn giá tốt trong dịp lễ hội pháo hoa Quốc tế Đà Nẵng 2018</p>
-                                    <p class="hl-item__text8 mb-0">
-                                        <em class="mb-0">Lễ hội pháo hoa quốc tế Đà Nẵng 2018 chính thức diễn ra vào ngày 30/4/2018. Du Lịch Việt cam kết giữ vững chất lượng với mức giá tốt nhất xuyên suốt mùa lễ hội.</em>
-                                    </p>
-                                    <p class="hl-item__text8" style="white-space:pre-line"><img src="images/p23.png" class="w-100 my-3" alt="">
-                                        Qua 8 lần tổ chức thành công, lễ hội pháo hoa quốc Đà Nẵng (DIFF) đã trở thành một trong những sự kiện, lễ hội được mong đợi nhất vào mỗi mùa hè. Lễ hội thu hút đông đảo du khách trong và ngoài nước đến tham dự. Năm nay, Đà Nẵng tiếp tục tổ chức lễ hội pháo hoa mang chủ đề “Huyền thoại của những cây cầu” sẽ diễn ra trong hai tháng, bắt đầu từ ngày 30/4 đến hết ngày 30/6.
-
-                                        Gồm 5 đêm trình diễn, mỗi đêm diễn mang một chủ đề, khơi gợi những cung tầng cảm xúc riêng trong lòng khán giả như Tình Yêu, Thời Gian, Hạnh Phúc, Khát Vọng và Hữu Nghị.
-
-                                        Với chủ đề “Huyền thoại của những cây cầu”, DIFF 2018 sẽ kể với khán giả câu chuyện văn hóa của 8 quốc gia/vùng lãnh thổ tham dự, thông qua những cây cầu biểu tượng ghi dấu ấn lịch sử, văn hóa, truyền thống và cả kỳ tích kiến trúc.
-
-                                        Đêm khai mạc diễn ra vào tối ngày 30/4/2018, với phần thi mở màn của 2 đội Việt Nam – Ba Lan (30/4), tiếp theo Pháp – Mỹ (26/5), Ý – Hồng Kông (02/6), Thụy Điển – Bồ Đào Nha (09/6). Hai đội xuất sắc sẽ được lựa chọn tham gia trình diễn tại đêm chung kết tranh giải Nhất – Nhì diễn ra vào ngày 30/6. Với những màn tranh tài gây cấn, chuyên nghiệp của các cường quốc pháo hoa, DIFF 2018 hứa hẹn sẽ đem đến cho du khách một mùa Lễ hội pháo hoa quốc tế Đà Nẵng lần thứ 9 với vô vàn cảm xúc, trải nghiệm mới mẻ.
-                                        <img src="images/p25.png" class="w-100 my-3" alt="">
-                                        Theo ông Đỗ Thanh Hải – Tổng đạo diễn lễ hội pháo hoa 2018 kỳ vọng sân khấu mỗi đêm trình diễn pháo hoa sẽ được thổi bừng sức trẻ, sự sáng tạo cùng những chương trình nghệ thuật sôi động, đặc sắc với sự tham gia của nhiều nghệ sỹ tên tuổi hàng đầu sẽ mang đến cho DIFF 2018 những giây phút thăng hoa cùng nghệ thuật.
-
-                                        Ngoài ra, Du Lịch Việt sẽ hỗ trợ mua vé xem pháo hoa khi du khách đăng ký tour tại Công ty. Điều này giúp du khách tránh khỏi tình trạng cháy vé, không mua được vé giá gốc, hay mua được nhưng với giá cao ngất ngưỡng và những thủ tục thanh toán, giao nhận vé phiền phức khi đăng ký mua Online. Song song đó, Công ty còn linh động lịch trình, sắp xếp xe đưa đón đến địa điểm diễn ra lễ hội. Hướng dẫn viên nhiệt tình tư vấn chọn chỗ xem bắn pháo hoa lý tưởng, để du khách có nhiều khung hình và khoảnh khắc đẹp nhất.
-                                    </p>
-                                    <div class="">
-                                        <span class="hl-item__text9">Đăng ngày</span>
-                                        <span class="hl-item__text1 mr-1">24/11/2017</span>
-                                        <img src="images/ic-facebook.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-google.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-twitter.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-pinterest.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-mail.svg" class="m-blur mx-2" alt="">
-                                        <img src="images/ic-printer.svg" class="m-blur mx-2 printer" alt="">
-                                    </div>
+                <div class="row">
+                    <div class="col-lg-4 col-xl-3 mb-lg-4">
+                        <div class="search-result__filter-bar">
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Hãng xe</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Hyundai</span>
+                                            <span class="ml-1 filter-bar__text1">(21)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Honda</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Ford</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">KIA</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">Mazda</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="bg-white hl-item__wrap1 mt-3">
-                                <div class="hl-item__content4 row">
-                                    <p class="col-md-6 hl-item__title3 mb-0">Ý kiến khách hàng</p>
-                                    <p class="callModalComment col-md-6 text-right">
-                                        <img src="images/ic-pen.svg" alt="" class="mb-1 mr-1">
-                                        <span class="hl-item__link3">Ý kiến của bạn</span>
-                                    </p>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
+                            <div class="filter-bar">
+                                <div class="filter-bar__head">Mức giá khách sạn</div>
+                                <div class="filter-bar__body">
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">4 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
                                         </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">7 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(324)</span>
                                         </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">16 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">24 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">29 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">35 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(47)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">45 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                    <label class="d-flex align-items-center filter-bar__item">
+                                        <input class="d-none filter-bar__item-checkbox" type="checkbox">
+                                        <div class="filter-bar__item-status"></div>
+                                        <div class="ml-2">
+                                            <span class="filter-bar__text2">50 chỗ</span>
+                                            <span class="ml-1 filter-bar__text1">(350)</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-xl-9 mt-1 pr-xl-2 pb-4">
+                        <div class="search-result__content">
+                            <div class="row">
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p27.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
-                                        </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
-                                        </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p28.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p29.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p30.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p31.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p27.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p28.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p29.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p30.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p31.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p27.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xl-4 mb-4">
+                                    <div class="h-100 hl-item">
+                                        <div class="h-100 bg-white hl-item__wrap1">
+                                            <div class="m-z-outer position-relative">
+                                                <img class="w-100 m-z-inner" src="images/p28.png" alt="">
+                                            </div>
+                                            <div class="hl-item__content1 pr-1">
+                                                <a class="d-inline-block mb-1 hl-item__title1" href="">Xe du lịch 4 chỗ Mazda 6</a>
+                                                <p class="mb-1">
+                                                    <span class="mr-1 hl-item__label1">Hãng xe:</span>
+                                                    <span class="mr-1 hl-item__text1">Mazda</span>
+                                                </p>
+                                                <div class="row">
+                                                    <p class="col-md-6 mb-1">
+                                                        <span class="mr-1 hl-item__label1">Loại xe:</span>
+                                                        <span class="mr-1 hl-item__text1">4 chỗ</span>
+                                                    </p>
+                                                    <h6 class="col-md-6 mb-2">
+                                                        <span class="mr-1 hl-item__text2">400,000</span>
+                                                        <span class="hl-item__text3">đ</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 pr-xl-2 pb-4 pt-3 line-height-1-2">
-                        <div class="hl-item">
-                            <div class="bg-white hl-item__wrap1">
-                                <div class="hl-item__content1">
-                                    <p class="hl-item__title3 mb-0">Cẩm nang nổi bật</p>
-                                </div>
-                                <hr>
-                                <div class="hl-item__content1 pt-1">
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p21.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p22.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p23.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p24.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="py-3">
+                            <div class="mb-4"><!-- Begin navigate -->
+<nav class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate">
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16">
+            <path fill="#888888" d="M349.5 475.5l-211.1-211c-4.7-4.7-4.7-12.3 0-17l211.1-211c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L178.1 256l195.5 195.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.6-12.3 4.6-17-.1zm-111 0l7.1-7.1c4.7-4.7 4.7-12.3 0-17L50.1 256 245.5 60.5c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0l-211.1 211c-4.7 4.7-4.7 12.3 0 17l211.1 211c4.8 4.8 12.4 4.8 17.1.1z"></path>
+        </svg>
+    </a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="16" height="16">
+            <path fill="#888888" d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"></path>
+        </svg>
+    </a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link active">1</a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">2</a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">3</a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="16" height="16">
+            <path fill="#888888" d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"></path>
+        </svg>
+    </a>
+    <a href="" class="d-flex flex-wrap justify-content-center align-items-center rounded-circle m-navigate__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16">
+            <path fill="#888888" d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z"></path>
+        </svg>
+    </a>
+</nav>
+<!-- End navigate --></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="m-pd-tb1 hl-tour">
-            <div class="container">
-                <h2 class="mb-4 m-title">Có thể bạn quan tâm những cẩm nang sau</h2>
-                <div class="js3ItemOwlCarousel owl-carousel owl-theme">
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p21.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p22.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p23.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p24.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- End search sesult body -->
     </main>
     <!-- Begin footer -->
 <footer class="footer pt-4">
@@ -784,32 +1102,6 @@
             </div>
         </div>
     </div>
-<!-- End modal forget password -->
-    <!-- // -->
-    <!-- Begin modal forget password -->
-<div id="modalComment" class="modal fade modal-c">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header p-4">
-                <h5 class="modal-title">Ý kiến của bạn</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="">
-                <div class="modal-body p-4">
-                    <textarea rows="10" class="col-12 p-0 hl-item__text1" placeholder="Nhập ý kiến của bạn..."></textarea>
-                </div>
-                <div class="modal-footer p-4">
-                    <div class="text-center">
-                        <button type="button" data-dismiss="modal" aria-label="Close" class="m-btn m-btn-close">Đóng</button>
-                        <button type="submit" class="m-btn m-btn-orange">Đăng ý kiến</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 <!-- End modal forget password -->
 </div>
 <script src="js/vendor.min.js"></script>

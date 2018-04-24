@@ -204,7 +204,97 @@
     </div>
 </section>
 <!-- End header mobile -->
-    <main class="m-height-screen m-bg-grey">
+    <main class="pb-2 m-height-screen m-bg-grey">
+        <!-- Begin search result head -->
+        <section class="bg-white search-result__head">
+            <div class="container d-xl-flex justify-content-between align-items-center search-result__head-wrap">
+                <div class="d-xl-flex align-items-center search-filter">
+                    <div id="searchTour" class="ui search form-group">
+                        <input class="prompt rounded form-control m-selection__w235 search-filter__bg-search" type="text" placeholder="Tìm địa điểm...">
+                        <div class="results w-100 mt-0"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w235">
+                            <input type="hidden" name="price">
+                            <div class="default text">Chọn khoảng giá</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
+                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
+                            </svg>
+                            <div class="menu">
+                                <div class="item" data-value="0">
+                                    <span>Từ</span> 1.000.000
+                                    <span>&#60;</span> 10.000.000
+                                    <span>đ</span>
+                                </div>
+                                <div class="item" data-value="1">
+                                    <span>Từ</span> 10.000.000
+                                    <span>&#60;</span> 100.000.000
+                                    <span>đ</span>
+                                </div>
+                                <div class="item" data-value="2">
+                                    <span>Từ</span> 100.000.000
+                                    <span>&#60;</span> 900.000.000
+                                    <span>đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="ui dropdown d-flex justify-content-between align-items-center pr-2 form-control m-selection m-selection__w180">
+                            <input type="hidden" name="price">
+                            <div class="default text">Chọn khoảng thời gian</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="20" height="20">
+                                <path fill="#ced4da" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path>
+                            </svg>
+                            <div class="menu">
+                                <div class="item" data-value="0">
+                                    <span>Từ</span> 1
+                                    <span>đến dưới</span> 7
+                                    <span>ngày</span>
+                                </div>
+                                <div class="item" data-value="1">
+                                    <span>Từ</span> 7
+                                    <span>đến dưới</span> 14
+                                    <span>ngày</span>
+                                </div>
+                                <div class="item" data-value="2">
+                                    <span>Từ</span> 14
+                                    <span>đến dưới</span> 31
+                                    <span>ngày</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-sm-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="d-none d-xl-block mr-3 search-result__head-space"></div>
+                        <button class="d-flex justify-content-center align-items-center mr-2 border-0 search-result__head-btn">
+                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </button>
+                        <button class="d-flex justify-content-center align-items-center border-0 search-result__head-btn">
+                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </button>
+                        <div class="mr-3 ml-3 search-result__head-space"></div>
+                        <button class="d-flex justify-content-center align-items-center mr-sm-3 border-0 search-result__head-btn">
+                            <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8c0-3.31-2.69-6-6-6S6 4.69 6 8c0 4.5 6 11 6 11s6-6.5 6-11zm-8 0c0-1.1.9-2 2-2s2 .9 2 2-.89 2-2 2c-1.1 0-2-.9-2-2zM5 20v2h14v-2H5z"
+                                />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </button>
+                    </div>
+                    <a class="d-flex justify-content-center align-items-center m-btn m-btn-grey search-result__head-btn-create" href="create-custom-tour.html">Tự thiết kế tour</a>
+                </div>
+            </div>
+        </section>
+        <!-- End search result head -->
 
         <div class="container">
             <!-- Begin breadcrumb -->
@@ -220,209 +310,168 @@
 <!-- End breadcrumb -->
         </div>
 
-        <!-- Begin search result body -->
-        <section class="search-result__body">
+        <!-- Begin body -->
+        <section class="mt-3 mb-5 book">
             <div class="container">
-                <div class="row pr-2">
-                    <div class="col-xl-8 pr-xl-2 pt-3 line-height-1-2">
-                        <div class="hl-item">
-                            <div id="introdude" class="bg-white hl-item__wrap1">
-                                <div class="hl-item__content4">
-                                    <p class="d-inline-block mb-3 hl-item__title4" href="">Bí kíp chọn giá tốt trong dịp lễ hội pháo hoa Quốc tế Đà Nẵng 2018</p>
-                                    <p class="hl-item__text8 mb-0">
-                                        <em class="mb-0">Lễ hội pháo hoa quốc tế Đà Nẵng 2018 chính thức diễn ra vào ngày 30/4/2018. Du Lịch Việt cam kết giữ vững chất lượng với mức giá tốt nhất xuyên suốt mùa lễ hội.</em>
-                                    </p>
-                                    <p class="hl-item__text8" style="white-space:pre-line"><img src="images/p23.png" class="w-100 my-3" alt="">
-                                        Qua 8 lần tổ chức thành công, lễ hội pháo hoa quốc Đà Nẵng (DIFF) đã trở thành một trong những sự kiện, lễ hội được mong đợi nhất vào mỗi mùa hè. Lễ hội thu hút đông đảo du khách trong và ngoài nước đến tham dự. Năm nay, Đà Nẵng tiếp tục tổ chức lễ hội pháo hoa mang chủ đề “Huyền thoại của những cây cầu” sẽ diễn ra trong hai tháng, bắt đầu từ ngày 30/4 đến hết ngày 30/6.
-
-                                        Gồm 5 đêm trình diễn, mỗi đêm diễn mang một chủ đề, khơi gợi những cung tầng cảm xúc riêng trong lòng khán giả như Tình Yêu, Thời Gian, Hạnh Phúc, Khát Vọng và Hữu Nghị.
-
-                                        Với chủ đề “Huyền thoại của những cây cầu”, DIFF 2018 sẽ kể với khán giả câu chuyện văn hóa của 8 quốc gia/vùng lãnh thổ tham dự, thông qua những cây cầu biểu tượng ghi dấu ấn lịch sử, văn hóa, truyền thống và cả kỳ tích kiến trúc.
-
-                                        Đêm khai mạc diễn ra vào tối ngày 30/4/2018, với phần thi mở màn của 2 đội Việt Nam – Ba Lan (30/4), tiếp theo Pháp – Mỹ (26/5), Ý – Hồng Kông (02/6), Thụy Điển – Bồ Đào Nha (09/6). Hai đội xuất sắc sẽ được lựa chọn tham gia trình diễn tại đêm chung kết tranh giải Nhất – Nhì diễn ra vào ngày 30/6. Với những màn tranh tài gây cấn, chuyên nghiệp của các cường quốc pháo hoa, DIFF 2018 hứa hẹn sẽ đem đến cho du khách một mùa Lễ hội pháo hoa quốc tế Đà Nẵng lần thứ 9 với vô vàn cảm xúc, trải nghiệm mới mẻ.
-                                        <img src="images/p25.png" class="w-100 my-3" alt="">
-                                        Theo ông Đỗ Thanh Hải – Tổng đạo diễn lễ hội pháo hoa 2018 kỳ vọng sân khấu mỗi đêm trình diễn pháo hoa sẽ được thổi bừng sức trẻ, sự sáng tạo cùng những chương trình nghệ thuật sôi động, đặc sắc với sự tham gia của nhiều nghệ sỹ tên tuổi hàng đầu sẽ mang đến cho DIFF 2018 những giây phút thăng hoa cùng nghệ thuật.
-
-                                        Ngoài ra, Du Lịch Việt sẽ hỗ trợ mua vé xem pháo hoa khi du khách đăng ký tour tại Công ty. Điều này giúp du khách tránh khỏi tình trạng cháy vé, không mua được vé giá gốc, hay mua được nhưng với giá cao ngất ngưỡng và những thủ tục thanh toán, giao nhận vé phiền phức khi đăng ký mua Online. Song song đó, Công ty còn linh động lịch trình, sắp xếp xe đưa đón đến địa điểm diễn ra lễ hội. Hướng dẫn viên nhiệt tình tư vấn chọn chỗ xem bắn pháo hoa lý tưởng, để du khách có nhiều khung hình và khoảnh khắc đẹp nhất.
-                                    </p>
-                                    <div class="">
-                                        <span class="hl-item__text9">Đăng ngày</span>
-                                        <span class="hl-item__text1 mr-1">24/11/2017</span>
-                                        <img src="images/ic-facebook.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-google.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-twitter.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-pinterest.svg" class="m-blur mr-1" alt="">
-                                        <img src="images/ic-mail.svg" class="m-blur mx-2" alt="">
-                                        <img src="images/ic-printer.svg" class="m-blur mx-2 printer" alt="">
-                                    </div>
-                                </div>
+                <div class="bg-white book__wrap">
+                    <div class="mx-auto px-3 pt-5 pb-4 book__content">
+                        <div class="position-relative">
+                            <div class="position-absolute w-100 px-4 px-xl-0 book__step-line">
                             </div>
-                            <div class="bg-white hl-item__wrap1 mt-3">
-                                <div class="hl-item__content4 row">
-                                    <p class="col-md-6 hl-item__title3 mb-0">Ý kiến khách hàng</p>
-                                    <p class="callModalComment col-md-6 text-right">
-                                        <img src="images/ic-pen.svg" alt="" class="mb-1 mr-1">
-                                        <span class="hl-item__link3">Ý kiến của bạn</span>
-                                    </p>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
-                                        </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
-                                        </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
-                                        </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
-                                        </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mt-1 mt-3 row">
-                                        <div class="col-2 col-sm-1 col-md-1 mr-3 mr-md-0">
-                                            <img class="rounded-circle header__avata" src="images/lbc.png" alt="">
-                                        </div>
-                                        <div class="col-9 col-sm-10 col-md-11">
-                                            <p class="hl-item__title1 m-0">Trần Hùng</p>
-                                            <p class="hl-item__text9 my-1">22/12/2017</p>
-                                        </div>
-                                        <div class="col-0 col-sm-1 col-md-1 mr-3 mr-md-0"></div>
-                                        <div class="col-12 col-sm-10 col-md-11">
-                                            <p class="hl-item__text8 m-0">Donec vulputate auctor eleifend. Aliquam at dui pharetra, accumsan augue a, consectetur
-                                                elit. Cras eget metus urna. Curabitur efficitur interdum nisl eget iaculis.
-                                                Nulla facilisi. Vestibulum quis urna et urna fringilla volutpat. </p>
-                                        </div>
-                                    </div>
+                            <div class="d-flex justify-content-between align-items-center px-4 px-xl-0">
+                                <div class="position-relative text-center book__step-item m-done">
+                                    <div class="position-absolute text-uppercase text-truncate text-center book__step-item-title">Đặt tour</div>
+                                    <div class="mx-auto rounded-circle book__step-item-circle"></div>
+                                </div>
+                                <div class="position-relative text-center book__step-item m-done">
+                                    <div class="position-absolute text-uppercase text-truncate text-center book__step-item-title">Xác nhận</div>
+                                    <div class="mx-auto rounded-circle book__step-item-circle"></div>
+                                </div>
+                                <div class="position-relative text-center book__step-item m-done">
+                                    <div class="position-absolute text-uppercase text-truncate text-center book__step-item-title">Đơn hàng</div>
+                                    <div class="mx-auto rounded-circle book__step-item-circle"></div>
+                                </div>
+                                <div class="position-relative text-center book__step-item m-active">
+                                    <div class="position-absolute text-uppercase text-truncate text-center book__step-item-title">Thanh toán</div>
+                                    <div class="mx-auto rounded-circle book__step-item-circle"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 pr-xl-2 pb-4 pt-3 line-height-1-2">
-                        <div class="hl-item">
-                            <div class="bg-white hl-item__wrap1">
-                                <div class="hl-item__content1">
-                                    <p class="hl-item__title3 mb-0">Cẩm nang nổi bật</p>
+                    <div class="mt-2 mb-3 book__line"></div>
+                    <div class="mx-auto px-3 py-4 book__content">
+                        <!-- Begin block -->
+                        <div class="pt-0">
+                            <div class="mb-4 text-center book__title">Thanh toán</div>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <h4 class="mb-3">
+                                        <span class="book__text-12">Chọn phương thức thanh toán</span>
+                                    </h4>
+                                    <label class="book__radio mb-3">
+                                        <span class="book__text-15">Chuyển khoản/ Internet banking</span>
+                                        <input type="radio" name="radio" data-id="book__radio_id1">
+                                        <span class="book__radio-status"></span>
+                                    </label>
+                                    <label class="book__radio mb-3">
+                                        <span class="book__text-15">Thanh toán bằng thẻ ATM</span>
+                                        <input type="radio" name="radio" data-id="book__radio_id2">
+                                        <span class="book__radio-status"></span>
+                                    </label>
+                                    <label class="book__radio mb-3">
+                                        <span class="book__text-15">Thanh toán bằng thẻ tín dụng (Master/ Visa)</span>
+                                        <input type="radio" name="radio" data-id="book__radio_id3">
+                                        <span class="book__radio-status"></span>
+                                    </label>
+                                    <label class="book__radio mb-3">
+                                        <span class="book__text-15">Thanh toán qua Paypal</span>
+                                        <input type="radio" name="radio" data-id="book__radio_id4">
+                                        <span class="book__radio-status"></span>
+                                    </label>
+                                    <a href="" class="book__link1">Quy định thanh toán/ bồi hoàn</a>
                                 </div>
-                                <hr>
-                                <div class="hl-item__content1 pt-1">
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p21.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
+                                <div class="col-md-6 book__price">
+                                    <div class="d-flex p-3">
+                                        <span class="mr-auto book__text-15">Chi phí tour cho 1 hành khách:</span>
+                                        <span class="book__text-16">400,000</span>
+                                        <span class="book__text-17 ml-1">đ</span>
                                     </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p22.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
+                                    <div class="d-flex p-3">
+                                        <span class="mr-auto book__text-15">Phí thuê xe 4 chỗ đi hang Sửng Sốt:</span>
+                                        <span class="book__text-16">300,000</span>
+                                        <span class="book__text-17 ml-1">đ</span>
                                     </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p23.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
+                                    <div class="d-flex px-3 py-2" style="background-color:#F6F6F6">
+                                        <span class="mr-auto book__text-12 mt-2">Tổng chi phí:</span>
+                                        <span class="book__text-13">700,000</span>
+                                        <span class="book__text-14 ml-1">đ</span>
                                     </div>
-                                    <div class="d-flex align-items-center mt-3">
-                                        <a href=""><img class="rounded" src="images/p24.png" alt="" width="130px"></a>
-                                        <div class="pl-3">
-                                            <a href="" class="hl-item__label1 text-dark m-0">Đón Noel và năm mới tại Silk Path Grand, resort ...</a>
-                                            <p class="mt-2 mb-1 filter-bar__text1">24/11/2017</p>
-                                        </div>
+                                    <div class="col-12 mb-2">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="row pt-3">
+                                                <input class="rounded form-control col-8" type="text" placeholder="Mã giảm giá..." required>
+                                                <button class="m-btn m-btn-orange col-4">Áp dụng mã</button>
+                                                <div class="valid-feedback">
+                                                    Đã nhập
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Chưa nhập
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- End block -->
+                        <div class="my-4 book__line"></div>
+                        <!-- Begin block -->
+                        <div class="mb-4 text-center book__title">Hướng dẫn thanh toán</div>
+                        <div>
+                            <div id="book__radio_id1" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức chuyển khoản, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id2" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức ATM, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                <div class="mb-2">Số tài khoản :</div>
+                                <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id3" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức thẻ tín dụng, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                            <div id="book__radio_id4" class="pt-0 d-none">
+                                <div class="book__wrap1 p-4">
+                                    <div class="mb-4">Để thực hiện việc thanh toán bằng phương thức Paypal, quý khách vui lòng thanh toán vào địa chi sau:</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div class="mb-2">Số tài khoản :</div>
+                                    <div class="mb-2 ml-3">Tài khoản VNĐ : 0023100012754</div>
+                                    <div class="mb-4 ml-3">Tài khoản USD : 0023170089755</div>
+                                    <div class="mb-2">Chủ tài khoản : Công ty FVG Travel</div>
+                                    <div class="mb-2">Ngân hàng : Ngân hàng Ngoại Thương - Chi nhánh Tp. Hồ Chí Minh.</div>
+                                    <div>Số tài khoản :</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End block -->
+                    </div>
+                    <div class="mt-3 mb-2 book__line"></div>
+                    <div class="d-flex justify-content-between align-items-center mx-auto px-3 pt-3 pb-4 book__content text-right">
+                        <button class="m-btn m-btn-grey">TRỞ LẠI</button>
+                        <button class="m-btn m-btn-orange">HOÀN THÀNH</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="m-pd-tb1 hl-tour">
-            <div class="container">
-                <h2 class="mb-4 m-title">Có thể bạn quan tâm những cẩm nang sau</h2>
-                <div class="js3ItemOwlCarousel owl-carousel owl-theme">
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p21.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p22.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p23.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                    <div class="p-1 hl-item">
-                        <div class="m-z-outer">
-                            <a href=""><img class="m-z-inner rounded w-100" src="images/p24.png" alt=""></a>
-                        </div>
-                        <div class="pt-3">
-                            <a class="d-inline-block mb-2 hl-item__title1" href="">Đón Noel và năm mới tại Silk Path Grand, một
-                                resort 5 sao cực sang chảnh ...
-                            </a>
-                            <p class="hl-item__text1 mb-1">
-                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
-                            <p class="mb-1 hl-item__text9">24/11/2017</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- End body -->
     </main>
     <!-- Begin footer -->
 <footer class="footer pt-4">
